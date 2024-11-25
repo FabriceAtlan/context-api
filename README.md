@@ -4,7 +4,7 @@
 
 - Le **CodeSandbox** de la quête ne fonctionnant pas, j'ai créé un projet `React` en **locale** et `push` sur **GitHub**.
 
-Afin de tester ce projet, faire les comandes suivantes :
+Pour tester ce projet, faites les comandes suivantes dans votre terminal :
 
 ```bash
 git clone git@github.com:FabriceAtlan/context-api.git
