@@ -1,50 +1,37 @@
-# React + TypeScript + Vite
+# React Intermédiaire 02 - Context API
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Information
 
-Currently, two official plugins are available:
+- Le **CodeSandbox** de la quête ne fonctionnant pas, j'ai créé un projet `React` en **locale** et `push` sur **GitHub**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Afin de tester ce projet, faire les comandes suivantes :
 
-## Expanding the ESLint configuration
+```bash
+git clone git@github.com:FabriceAtlan/context-api.git
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+cd context-api
 
-- Configure the top-level `parserOptions` property like this:
+npm install
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+npm run dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Challenge
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Dans ce défi, tu vas réaliser une application simple qui changera le statut de l'utilisateur en un clic !
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- **fork** le code suivant ;
+
+- Dans `UserContext.js`, créez un contexte `UserContext` ;
+
+- Crée un state `isOnline` dans `App.js` (par défaut défini sur `false`) avec `useState` ;
+
+- Importe le contexte dans `App.js` et utilise un `Provider` ;
+
+- Passe un objet avec `isOnline` et `setIsOnline` comme valeur pour le `Provider` ;
+
+- Dans `UserProfile.js`, consomme les données du contexte avec `useContext` ;
+
+- Modifie le texte pour qu'il affiche **en ligne** si la valeur booléenne est **true**, et **hors ligne** si la valeur est **false** ;
+
+-Ajoute un écouteur d'événement sur le bouton qui appellera `setIsOnline` et basculera la valeur de `isOnline`.
